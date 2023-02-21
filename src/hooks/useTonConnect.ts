@@ -28,7 +28,7 @@ export function useTonConnect(): {
 
         const url = 'https://seahorse-app-qdt2w.ondigitalocean.app/payments';
         const data = {
-          amount: args.value.toString(),
+          amount: +args.value.toString() / 1000000000,
           text: args.body?.toBoc().toString(),
           nickname: 'Ihor Codes',
           clientId: 'vlad10',
